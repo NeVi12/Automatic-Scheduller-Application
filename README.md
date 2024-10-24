@@ -2,6 +2,8 @@
 This is an automatic time-table generating web application for schools and universities,
 The application automate the process of generating time tables while considering various constraints and optimizing for criteria such as minimal gaps between classes and balanced teacher workloads. 
 
+![Admin Signin - Google Chrome 10_14_2024 10_34_03 AM](https://github.com/user-attachments/assets/dd40779d-18ca-4750-88f7-b944eff9585f)
+
 ## How to Setup the web application
 
 1) Download and install Visual Studio Code(VScode):- https://code.visualstudio.com/
