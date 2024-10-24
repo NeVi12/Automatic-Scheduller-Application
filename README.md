@@ -19,5 +19,5 @@ The application automate the process of generating time tables while considering
 13) You can create a new account and enjoy the application.
 14) You can delete all the data from the database and apply new data to the database by the web application and generate time table for your need.
 
-###Enjoy!!
+### Enjoy!!
 Feel free to ask any questions!!!
