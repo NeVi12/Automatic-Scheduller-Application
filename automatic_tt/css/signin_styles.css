@@ -1,0 +1,156 @@
+/* Base Styles */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background: url('img/loginbg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #333;
+}
+
+/* Sign-in Container */
+.signin-container {
+    background: rgba(255, 255, 255, 0.6); /* Slightly less transparent */
+    padding: 40px;
+    border-radius: 15px; /* Smooth rounded corners */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    width: 360px; /* Width adjusted for a sleek look */
+    max-width: 90%; /* Responsive width */
+    text-align: left;
+    border: 1px solid rgba(255, 255, 255, 0.4); /* Subtle border */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+/* Hover Effect */
+.signin-container:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Heading */
+.signin-container h2 {
+    font-family: 'Roboto', Arial, sans-serif; /* Modern, clean font */
+    text-align: center;
+    margin-bottom: 30px; /* Spacing */
+    font-size: 28px; /* Large size for emphasis */
+    font-weight: 700; /* Bold for strong presence */
+    color: transparent; /* Hide default color */
+    background: linear-gradient(90deg, #5bcbf7, #01502b); /* Gradient background */
+    -webkit-background-clip: text; /* Clip gradient to text for WebKit browsers */
+    background-clip: text; /* Clip gradient to text */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    letter-spacing: 1px; /* Increased spacing for a sleek look */
+    text-transform: uppercase; /* Uppercase for a modern feel */
+    border-bottom: 2px solid #01502b; /* Underline effect for emphasis */
+    padding-bottom: 10px; /* Space between text and underline */
+}
+
+
+/* Labels */
+.signin-container label {
+    display: block;
+    margin-bottom: 10px; /* Consistent spacing */
+    font-weight: 700; /* Bold text */
+    color: #555;
+    font-size: 16px; /* Clean and modern */
+    text-transform: uppercase;
+}
+
+/* Input Fields */
+.signin-container input[type=text], 
+.signin-container input[type=password] {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 10px; /* Rounded corners */
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: #f9f9f9; /* Light grey background */
+    transition: border 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+.signin-container input[type=text]:focus, 
+.signin-container input[type=password]:focus {
+    border: 1px solid #007BFF;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.3); /* Subtle focus shadow */
+    outline: none;
+    background-color: #ffffff; /* Solid background on focus */
+}
+
+/* Buttons */
+.signin-container button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #007BFF, #0056b3); /* Gradient background */
+    color: white;
+    border: none;
+    border-radius: 10px; /* Rounded corners */
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 15px;
+    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+.signin-container button[type=reset] {
+    background: linear-gradient(135deg, #6c757d, #5a6268); /* Gradient background for reset */
+}
+
+.signin-container button:hover {
+    background: linear-gradient(135deg, #0056b3, #004085); /* Darker gradient on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Error Messages */
+.signin-container .error {
+    color: #e74c3c; /* Bright red */
+    font-size: 14px; /* Consistent font size */
+    margin-top: -8px; /* Adjusted margin */
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: 500; /* Medium weight */
+    animation: shake 0.3s ease; /* Shake animation */
+}
+
+/* Success Messages */
+.signin-container p {
+    text-align: center;
+    color: #28a745;
+    font-size: 16px; /* Slightly larger font size */
+    margin-top: 20px;
+    font-weight: 500; /* Medium weight */
+}
+
+/* Signup Button */
+.signup-button {
+    position: fixed; /* Fixed position */
+    top: 20px;
+    right: 20px;
+    padding: 12px 30px;
+    background: linear-gradient(135deg, #007BFF, #0056b3); /* Gradient background */
+    color: white;
+    border: none;
+    border-radius: 12px; /* More rounded corners */
+    cursor: pointer;
+    font-size: 18px; /* Larger font size */
+    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.signup-button:hover {
+    background: linear-gradient(135deg, #0056b3, #003d79); /* Darker gradient on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+    transform: scale(1.05); /* Slight scale effect */
+}
+
+/* Shake Animation */
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}

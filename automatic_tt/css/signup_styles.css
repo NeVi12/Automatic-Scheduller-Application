@@ -1,0 +1,155 @@
+/* Base Styles */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background: url('img/signupbg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #333;
+}
+
+/* Sign-in Container */
+.signup-container {
+    background: rgba(255, 255, 255, 0.6); /* Slightly less transparent */
+    padding: 25px; /* Reduced padding */
+    border-radius: 12px; /* Slightly less rounded */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Slightly smaller shadow */
+    width: 320px; /* Reduced width */
+    max-width: 90%; /* Responsive width */
+    text-align: left;
+    border: 1px solid rgba(255, 255, 255, 0.4); /* Subtle border */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+/* Hover Effect */
+.signup-container:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Heading */
+.signup-container h2 {
+    font-family: 'Roboto', Arial, sans-serif; /* Modern, clean font */
+    text-align: center;
+    margin-bottom: 20px; /* Reduced spacing */
+    font-size: 24px; /* Slightly smaller size */
+    font-weight: 700; /* Bold for strong presence */
+    color: transparent; /* Hide default color */
+    background: linear-gradient(90deg, #313131, #695514); /* Gradient background */
+    -webkit-background-clip: text; /* Clip gradient to text for WebKit browsers */
+    background-clip: text; /* Clip gradient to text */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    letter-spacing: 0.5px; /* Increased spacing for a sleek look */
+    text-transform: uppercase; /* Uppercase for a modern feel */
+    border-bottom: 2px solid #695514; /* Underline effect for emphasis */
+    padding-bottom: 8px; /* Space between text and underline */
+}
+
+/* Labels */
+.signup-container label {
+    display: block;
+    margin-bottom: 8px; /* Reduced margin */
+    font-weight: 700; /* Bold text */
+    color: #555;
+    font-size: 14px; /* Slightly smaller size */
+    text-transform: uppercase;
+}
+
+/* Input Fields */
+.signup-container input[type=text], 
+.signup-container input[type=password] {
+    width: 100%;
+    padding: 10px; /* Reduced padding */
+    margin-bottom: 12px; /* Reduced margin */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 8px; /* Slightly less rounded */
+    box-sizing: border-box;
+    font-size: 14px; /* Smaller size */
+    background-color: #f9f9f9; /* Light grey background */
+    transition: border 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+.signup-container input[type=text]:focus, 
+.signup-container input[type=password]:focus {
+    border: 1px solid #007BFF;
+    box-shadow: 0 0 6px rgba(0, 123, 255, 0.3); /* Subtle focus shadow */
+    outline: none;
+    background-color: #ffffff; /* Solid background on focus */
+}
+
+/* Buttons */
+.signup-container button {
+    width: 100%;
+    padding: 10px; /* Reduced padding */
+    background: linear-gradient(135deg, #007BFF, #0056b3); /* Gradient background */
+    color: white;
+    border: none;
+    border-radius: 8px; /* Slightly less rounded */
+    cursor: pointer;
+    font-size: 14px; /* Smaller font size */
+    margin-bottom: 10px; /* Reduced margin */
+    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+.signup-container button[type=reset] {
+    background: linear-gradient(135deg, #6c757d, #5a6268); /* Gradient background for reset */
+}
+
+.signup-container button:hover {
+    background: linear-gradient(135deg, #0056b3, #004085); /* Darker gradient on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Error Messages */
+.signup-container .error {
+    color: #e74c3c; /* Bright red */
+    font-size: 12px; /* Smaller size */
+    margin-top: -6px; /* Adjusted margin */
+    margin-bottom: 8px; /* Reduced margin */
+    text-align: center;
+    font-weight: 500; /* Medium weight */
+    animation: shake 0.3s ease; /* Shake animation */
+}
+
+/* Success Messages */
+.signup-container p {
+    text-align: center;
+    color: #28a745;
+    font-size: 14px; /* Slightly smaller size */
+    margin-top: 15px; /* Reduced margin */
+    font-weight: 500; /* Medium weight */
+}
+
+/* Signup Button */
+.login-button {
+    position: fixed; /* Fixed position */
+    top: 20px;
+    right: 20px;
+    padding: 10px 25px; /* Reduced padding */
+    background: linear-gradient(135deg, #007BFF, #0056b3); /* Gradient background */
+    color: white;
+    border: none;
+    border-radius: 10px; /* Slightly less rounded */
+    cursor: pointer;
+    font-size: 16px; /* Slightly smaller font size */
+    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.login-button:hover {
+    background: linear-gradient(135deg, #0056b3, #003d79); /* Darker gradient on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+    transform: scale(1.05); /* Slight scale effect */
+}
+
+/* Shake Animation */
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}

@@ -1,0 +1,202 @@
+/* General styling for the page */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #f6f9fc, #dceefb); /* Softer, brighter gradient */
+    margin: 0;
+    padding: 20px;
+    color: #333;
+    transition: background-color 0.3s ease-in-out;
+    min-height: 100vh;
+    display: flex;
+    align-items: center; /* Vertically center content */
+    justify-content: center; /* Horizontally center content */
+}
+
+/* Styling for the form containers */
+.form-container {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 40px;
+    max-width: 700px;
+    margin: 40px auto;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border-top: 5px solid #28a745; /* Add a top border for an accent */
+    position: relative; /* To use in floating element */
+    overflow: hidden;
+}
+
+.form-container::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 200px;
+    height: 200px;
+    background: rgba(40, 167, 69, 0.2);
+    border-radius: 50%;
+    z-index: 0;
+    transition: transform 0.5s ease-in-out;
+}
+
+.form-container:hover::before {
+    transform: scale(1.5); /* Animate the background effect on hover */
+}
+
+.form-container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Form headings */
+.form-container h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    font-size: 32px;
+    font-weight: 700; /* Bolder font for emphasis */
+    letter-spacing: 1px;
+    border-bottom: 3px solid #28a745;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+}
+
+/* Form field label styling */
+.form-container label {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+    display: block; /* Ensure labels are block-level */
+    position: relative;
+    z-index: 1;
+}
+
+/* Input fields */
+.form-container input, .form-container select {
+    width: 100%;
+    padding: 16px; /* Slightly larger padding for more space */
+    margin: 12px 0 22px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 16px;
+    background: #f9f9f9; /* Softer background */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.form-container input:focus, .form-container select:focus {
+    border-color: #28a745;
+    box-shadow: 0 0 10px rgba(40, 167, 69, 0.4); /* Stronger glow on focus */
+    background: #fff; /* Brighten input on focus */
+}
+
+/* Submit button */
+.form-container input[type="submit"] {
+    background: linear-gradient(135deg, #28a745, #218838);
+    color: white;
+    padding: 16px; /* Increased padding */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 700;
+    transition: background 0.3s ease, transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+    position: relative;
+    z-index: 1;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 12px rgba(40, 167, 69, 0.2); /* Add a soft shadow */
+}
+
+.form-container input[type="submit"]:hover {
+    background: linear-gradient(135deg, #218838, #28a745);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(40, 167, 69, 0.3); /* Enhance shadow on hover */
+}
+
+.form-container input[type="submit"]:active {
+    transform: translateY(2px); /* Press effect */
+    box-shadow: 0 3px 8px rgba(40, 167, 69, 0.3); /* Subtle shadow on press */
+}
+
+/* Add a floating decorative element */
+.form-container::after {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    background: rgba(40, 167, 69, 0.2);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+
+/* Top Right Button */
+.top-right-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: linear-gradient(135deg, #6dd5fa, #2980b9); /* Gradient button */
+    color: white;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Soft shadow for button */
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.top-right-button:hover, .top-right:hover {
+    background: linear-gradient(135deg, #57c3e3, #1f618d); /* Darker gradient on hover */
+    transform: translateY(-5px); /* Lift button on hover */
+}
+
+.top-right-button:active, .top-right:active {
+    transform: translateY(2px); /* Press effect */
+}
+
+.top-right {
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    background: linear-gradient(135deg, #6dd5fa, #2980b9); /* Gradient button */
+    color: white;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Soft shadow for button */
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .form-container {
+        padding: 20px;
+    }
+
+    .form-container h2 {
+        font-size: 28px;
+    }
+
+    .form-container input[type="submit"] {
+        font-size: 16px;
+    }
+}
+
+
+/* Smooth transition for all elements */
+* {
+    transition: all 0.3s ease-in-out;
+}

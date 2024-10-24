@@ -1,0 +1,184 @@
+/* General Body Styles */
+body {
+    font-family: 'Poppins', sans-serif; /* Modern font for a fresher look */
+    background-color: #f2f6fc; /* Soft light blue background */
+    margin: 0;
+    padding: 0;
+    color: #2c3e50;
+    transition: background-color 0.3s ease;
+}
+
+/* Container Styles */
+.form-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15); /* Larger shadow for depth */
+    transition: all 0.3s ease;
+    border: 1px solid #e4e9f2;
+}
+
+.form-container:hover {
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.25); /* Stronger shadow on hover */
+    transform: translateY(-8px); /* Lift container slightly */
+}
+
+/* Top Right Button */
+.top-right-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: linear-gradient(135deg, #6dd5fa, #2980b9); /* Gradient button */
+    color: white;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Soft shadow for button */
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.top-right-button:hover, .top-right:hover {
+    background: linear-gradient(135deg, #57c3e3, #1f618d); /* Darker gradient on hover */
+    transform: translateY(-5px); /* Lift button on hover */
+}
+
+.top-right-button:active, .top-right:active {
+    transform: translateY(2px); /* Press effect */
+}
+
+.top-right {
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: linear-gradient(135deg, #6dd5fa, #2980b9); /* Gradient button */
+    color: white;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Soft shadow for button */
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+
+
+/* Heading Styles */
+h2 {
+    text-align: center;
+    color: #34495e;
+    margin-bottom: 30px;
+    font-size: 34px;
+    font-weight: 700;
+    letter-spacing: 2px; /* Slight letter spacing for elegance */
+    text-transform: uppercase;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    width: 80px;
+    height: 3px;
+    background-color: #3498db;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+thead {
+    background: linear-gradient(135deg, #8e44ad, #3498db); /* Updated gradient */
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 10px 10px 0 0;
+}
+
+th, td {
+    padding: 20px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 500;
+    border-bottom: 1px solid #e1e5f2;
+    transition: background-color 0.3s ease;
+}
+
+/* Table Cell Styles */
+td {
+    color: #34495e; /* Slightly darker text color for better contrast */
+}
+
+tr {
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Row Hover Effect */
+tr:hover {
+    background-color: #f0f3f9;
+    transform: scale(1.01); /* Subtle zoom effect */
+}
+
+/* No Data Found Styles */
+tr td {
+    text-align: center;
+    font-style: italic;
+    color: #333333;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .form-container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    table, th, td {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tr {
+        margin-bottom: 10px;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+    }
+
+    td {
+        text-align: right;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        width: calc(50% - 20px);
+        text-align: left;
+        font-weight: bold;
+        color: #3498db;
+    }
+}
+
+/* Smooth Animations for All Elements */
+* {
+    transition: all 0.3s ease;
+}

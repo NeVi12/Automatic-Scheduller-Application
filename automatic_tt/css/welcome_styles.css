@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+body {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #42cee7, #2f86e9); /* Colorful gradient */
+    overflow: hidden;
+}
+
+/* Background container */
+.background-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* Clocks */
+.clock {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border: 10px solid #333; /* Dark border */
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.8); /* Light clock face */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: #333;
+}
+
+.clock1 {
+    top: 20%;
+    left: 10%;
+    animation: spin 60s linear infinite; /* Spin animation */
+}
+
+.clock2 {
+    top: 30%;
+    left: 70%;
+    animation: spin 70s linear infinite reverse; /* Reverse rotation */
+}
+
+.clock3 {
+    top: 60%;
+    left: 30%;
+    animation: spin 80s linear infinite;
+}
+
+.clock4 {
+    top: 50%;
+    left: 50%;
+    animation: spin 90s linear infinite reverse;
+}
+
+/* Loading circles */
+.loading-circle {
+    position: absolute;
+    border: 6px solid rgba(255, 255, 255, 0.8);
+    border-top: 6px solid #333;
+    border-radius: 50%;
+    animation: spin 1.5s linear infinite;
+}
+
+.loading-circle:nth-child(5) {
+    width: 50px;
+    height: 50px;
+    top: 10%;
+    left: 80%;
+}
+
+.loading-circle:nth-child(6) {
+    width: 40px;
+    height: 40px;
+    top: 70%;
+    left: 20%;
+}
+
+.loading-circle:nth-child(7) {
+    width: 30px;
+    height: 30px;
+    top: 40%;
+    left: 60%;
+}
+
+/* Animations */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Content container */
+.content-container {
+    backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: #333;
+    max-width: 500px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    animation: fadeIn 1.5s ease-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.content-container h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #00c3ff; /* Soft red */
+}
+
+.content-container p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.content-container .countdown {
+    font-size: 24px;
+    color: #fc3e3e;
+    margin-bottom: 20px;
+}
+
+.content-container button {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #0025f7; /* Soft red */
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(120, 73, 248, 0.4);
+}
+
+.content-container button:hover {
+    background-color: #3450f3;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 61, 61, 0.6);
+}
